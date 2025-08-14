@@ -2,8 +2,7 @@
 
 A tool to watch Kubernetes resources and display clean, human-readable diffs when changes occur.
 
-![GitHub](https://img.shields.io/github/license/yourusername/kube-watch-neat-diff)
-![GitHub go.mod Go version](https://img.shields.io/github/go-mod/go-version/yourusername/kube-watch-neat-diff)
+![GitHub go.mod Go version](https://img.shields.io/github/go-mod/go-version/kizuna-lek/kube-watch-neat-diff)
 
 ## Overview
 
@@ -118,10 +117,6 @@ Contributions are welcome! Please feel free to submit a Pull Request.
 3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
 4. Push to the branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
-
-## License
-
-This project is licensed under the MIT License.
 
 ## Acknowledgments
 
