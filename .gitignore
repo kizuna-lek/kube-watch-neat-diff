@@ -1,0 +1,14 @@
+# Mac OS X files
+.DS_Store
+
+# editor and IDE paraphernalia
+.vscode/
+.idea/
+.history/
+.run/
+.vimrc
+*.swp
+*.swo
+*~
+
+
