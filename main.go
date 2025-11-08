@@ -27,6 +27,7 @@ const (
 var (
 	resource      = kingpin.Arg("resource-type", "Resource to watch").Required().String()
 	name          = kingpin.Arg("resource-name", "Name of the resource").Required().String()
+	namespace     = kingpin.Flag("namespace", "Namespace of the resource").Short('n').String()
 	diffWithFirst = kingpin.Flag("diff-with-first", "Diff with first version, instead of previous version, default false").Short('f').Bool()
 	noColor       = kingpin.Flag("no-color", "Disable colored output").Bool()
 )
@@ -145,7 +146,16 @@ func init() {
 func main() {
 	log.Println("Starting kube-watch-neat-diff")
 
-	cmd := exec.Command("kubectl", "get", "-w", *resource, *name, "-o=json")
+	var args []string
+	args = append(args, "get", "-w")
+
+	if *namespace != "" {
+		args = append(args, "-n", *namespace)
+	}
+
+	args = append(args, *resource, *name, "-o=json")
+
+	cmd := exec.Command("kubectl", args...)
 	cmd.Stderr = os.Stderr
 	stdout, err := cmd.StdoutPipe()
 	if err != nil {

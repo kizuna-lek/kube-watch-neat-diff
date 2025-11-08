@@ -70,6 +70,7 @@ kube-watch-neat-diff deployment my-app --no-color
 | Flag | Short | Description |
 |------|-------|-------------|
 | `--diff-with-first` | `-f` | Diff with first version instead of previous version |
+| `namespace` | `-n` | Specify the Kubernetes namespace |
 | `--no-color` | | Disable colored output |
 | `--help` | `-h` | Show help message |
 | `--version` | | Show version information |
